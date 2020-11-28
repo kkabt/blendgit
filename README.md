@@ -4,7 +4,7 @@ This addon is forked version of [**scorpion81/Blender-Destructability-Editor/ble
 
 
 ## Installation
-1. Download zip file from [latest release](../releases/latest)
+1. Download zip file from [latest release](/releases/latest)
 2. Launch Blender and open Preferences
 3. In Add-ons section, click "Install..." button and select "blendgit.zip"
 
