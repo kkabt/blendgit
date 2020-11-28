@@ -144,11 +144,15 @@ class GIT_OT_command_popup(GitOperator):
     @staticmethod
     def replace_keyword(context, command):
         gcon = g(context)
+        branchname = gcon.branches[gcon.active_branch].name if len(gcon.branches) else ""
+        file_ref = gcon.files[gcon.active_file].ref if len(gcon.files) else ""
+        stash_rev = gcon.stashes[gcon.active_stash].revision if len(gcon.stashes) else ""
+        commit_hash = gcon.logs[gcon.active_log].commit_hash if len(gcon.logs) else ""
         d = {
-            '<branch>': gcon.branches[gcon.active_branch].name,
-            '<file>': gcon.files[gcon.active_file].ref,
-            '<stash>': f"{gcon.stashes[gcon.active_stash].revision}",
-            '<commit>': gcon.logs[gcon.active_log].commit_hash
+            '<branch>': branchname,
+            '<file>': file_ref,
+            '<stash>': stash_rev,
+            '<commit>': commit_hash
             }
         cmd = command
         for k,v in d.items():
