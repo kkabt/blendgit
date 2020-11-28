@@ -200,7 +200,7 @@ class GitOperator(Operator):
         if hasattr(reporter, 'report'):
             res = cls.get_results(str)
             if res.strip():
-                if 'fatal' in res:
+                if 'fatal' in res or 'error' in res:
                     t = {'ERROR'}
                 elif res == 'No local changes to save':
                     t = {'WARNING'}
