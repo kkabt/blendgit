@@ -22,17 +22,17 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
 bl_info = {
-    "name": "BlendGit",
-    "author": "scorpion81, Kei Kabuto",
-    "support": "COMMUNITY",
-    "version": (3, 3, 7),
-    "blender": (2, 83, 0),
-    "location": "Topbar / Sidebar -> Git",
-    "description": "Keep track of revisions of blend files in git from blender",
-    "warning": "",
-    "wiki_url": "",
-    "tracker_url": "https://github.com/kei-kabuto/blendgit/",
-    "category": "User",
+    "name":         "BlendGit",
+    "description":  "Keep track of revisions of blend files in git from blender",
+    "author":       "scorpion81, Kei Kabuto",
+    "version":      (3, 3, 7),
+    "blender":      (2, 83, 0),
+    "location":     "Topbar / Sidebar -> Git",
+    "warning":      "",
+    "wiki_url":     "",
+    "tracker_url":  "https://github.com/kei-kabuto/blendgit/",
+    "support":      "COMMUNITY",
+    "category":     "User",
     }
 
 

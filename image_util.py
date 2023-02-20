@@ -1,4 +1,5 @@
 import bpy
+import bpy.utils.previews
 
 from .common import get_subpath
 
@@ -16,7 +17,6 @@ def get_icon(name: str) -> 'icon_id: int':
 
 
 def register():
-
     pcoll = bpy.utils.previews.new()
     preview_collections["blendgit"] = pcoll
 
