@@ -112,10 +112,20 @@ class Git:
 
     def open_dir(self, dirpath) -> 'exist: bool':
         if os.path.exists(dirpath):
-            subprocess.Popen([
-                'explorer',
-                dirpath.replace("/", "\\")
-                ])
+            if platform.system() == 'Windows':
+                subprocess.Popen([
+                    'explorer',
+                    dirpath.replace("/", "\\")
+                    ])
+            # elif platform.system() == 'Linux':
+            #     print("%s already exists" % dirpath)
+            # elif platform.system() == 'Mac':
+            #     subprocess.Popen([
+            #         'finder',
+            #         dirpath.replace("/", "\\")
+            #         ])
+
+                # print(dirpath.replace("/", "\\"))
             return True
         else:
             return False
