@@ -20,7 +20,7 @@ class FileEntry(PropertyGroup):
         logline = self.logline
 
         self.name = logline
-        self.ref = logline[3:]
+        self.ref = logline[3:].strip('"')
 
         X,Y = logline[:2]
 
